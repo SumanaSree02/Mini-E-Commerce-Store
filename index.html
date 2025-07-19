@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEEDORE E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>NEEDORE</h1>
+                </div>
+                
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="icon-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn" id="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+         <div class="login-section">
+                <button class="login-btn" id="login-btn"> <i class="fas fa-sign-in-alt"></i>Login / Register</button>
+            </div>
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+
+            <section class="hero-parallax">
+                <div class="hero-content">
+                    <h1>Find What You Need - Delivered with Style</h1>
+                    <p>Shop curated essentials with elegance & ease</p>
+                    <button class="cta-btn" onclick="window.location.href='userlogin.php'">Shop Now</button>
+                </div>
+            </section>
+
+
+
+            
+
+            <section class="category-carousel">
+                <h2 class="carousel-title">Explore Categories</h2>
+                
+                <div class="carousel-wrapper">
+                    <!-- Left Button -->
+                    <button class="carousel-btn left-btn" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-track" id="carousel-track">
+                    <!-- Add your category cards -->
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSmHoR4VSiZutN0lqn5z7b2TBXi0yLiCJvKxSizbkJi3RaWtYoeWds3Ja8cW3c8UpdyqPwV1CbeyCvB9KWtGtJWsVESZevwCTYeJetkgM8" alt="Clothing">
+                        <div class="category-label">Clothing</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQpt0DwfqtMuYFw8BIdeEYNkhtpx43k_eqL2RpOjX3uEAz3zeXdHxnkrZbWjfovzl2VsJGVq-ZnDCA-VGvgF6GFLJe-VuDXoCiTP4ahEF-RbzDshzGrxlHsLw" alt="Electronics">
+                        <div class="category-label">Electronics</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRvv-qzK2pIsvWSMj0yCJBsjm6FAoc3V97I3iI5gbJ1s2N9IJ4HsDb-qUjBMHRQoREY7PtgX978uThngR4PP6afufkyJY0VAauVSIPx8kSmKYKZ42QY6MNQGw" alt="Beauty">
+                        <div class="category-label">Beauty</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRvJRn_0a8iXTfaMFpsVOYCYVZUZwmjyV8mHKmkAKD5KZxi4o3kC2wSmbcCUU7upmO4tLBn3r-pp68UaCBnxJoHIM1r79LGgOrUCWJyRG_3aZp-UBkp0ZnHyQ" alt="Books">
+                        <div class="category-label">Books</div>
+                    </div>
+                    
+                    <!-- Add more cards as needed -->
+                     <div class="category-card">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwNxyfTQXzeRveJQZjtyVAqr1Vp1rAK1Fr4wkEI1drpN4y6a7XvhocNpkGE-eYnbEs8FHsmCnnkv3y5kpCurdvNrax7oy0fCnDyjiNhG_z" alt="Clothing">
+                        <div class="category-label">Living</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRyy9QPOZ-qGvhXVRHEh99Ym6535RwSJ6qN9IlUYgsFyEIH5EGKcwvvnAKZPVOfbVxF8anACKpNhh32eT8QCUEK2ohr7jI4tM54tyOfmITdfqRGyqRrIz5vwA" alt="Electronics">
+                        <div class="category-label">Footwear</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRMnPf4LBgl2Fvv78Qc2gRCupcIgxJKEJVwU0BFHp9EWamF3yUq1ZeigLBRhOVlhJuBqTQB8i0Rv4Ws2pRaWvsu0Nwe9WdyYok7WWJDXvy0K9VFitd0za5_AA" alt="Beauty">
+                        <div class="category-label">Sports & Fitness</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSQigzlP2MtnYXrNR145_LsL35P-iCN3ZWUolIr5z4q9xCQSSZl1eTgNTpnPfwx8w5qtzhfUEy0OLNTAASFCOyX_2PHEFdsVsr-TIZmdFI" alt="Books">
+                        <div class="category-label">Travel Essentials</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRSNHDJ6vkfhzWZ_meBB4od8p4GBaKG5IrTAbAFMM6--M1j5a-13dD1ovRs1CmEP-kUJ7EHc3S5q7wfm9k3oHZT8xJpAEzIr-5OIrN3tIwNFDpPITk7zXG4rQ" alt="Clothing">
+                        <div class="category-label">Toys & Games</div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRkRPuAG348k0gyFNjRYo3NXeFhSN1s-gnJIXSc9uk5akS2KIYv5C1phpeLI4LxKG9QnHzhlGJITSySc71IHaKJZEEdW9grE3TPOSWoi0sfJXfkmQwX83_QoQ" alt="Electronics">
+                        <div class="category-label">Food</div>
+                    </div>
+                    
+                    </div>
+                
+                    <!-- Right Button -->
+                    <button class="carousel-btn right-btn" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+            </section>
+
+
+
+            <!-- Services Section -->
+            <section class="services">
+                <div class="container">
+                    <h2 class="services-title">Why Shop With Us?</h2>
+                    <p class="services-subtitle">Your experience matters. Here's what makes us different.</p>
+                    
+                    <div class="services-grid">
+                    <div class="service-card animate fade-in">
+                        <div class="icon-wrap">
+                        <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Fast & Free Shipping</h3>
+                        <p>On all orders over ₹199 – get it to your door quickly & reliably.</p>
+                    </div>
+
+                    <div class="service-card featured animate fade-in delay-1">
+                        <div class="icon-wrap">
+                        <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Top-Notch Quality</h3>
+                        <p>Only 100% genuine, premium-grade, and handpicked products.</p>
+                    </div>
+
+                    <div class="service-card animate fade-in delay-2">
+                        <div class="icon-wrap">
+                        <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Friendly and prompt support anytime you need help or guidance.</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+
+        <!-- Cart Page -->
+        <section id="cart" class="page">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <h1>Your Shopping Cart</h1>
+                        <p>Review your items before checkout</p>
+                    </div>
+                    
+                    <div class="cart-content">
+                        <div class="cart-table-header">
+                            <div class="col-product">Product</div>
+                            <div class="col-price">Price</div>
+                            <div class="col-quantity">Quantity</div>
+                            <div class="col-total">Total</div>
+                        </div>
+                        
+                        <div id="cart-items">
+                            <!-- Cart items will be loaded by JavaScript -->
+                        </div>
+                        
+                        <div class="cart-footer">
+                            <button class="continue-shopping" onclick="showPage('shop')">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </button>
+                            
+                            <div class="cart-summary">
+                                <h3>Cart Summary</h3>
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span id="cart-subtotal">Rs 0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span class="free">Calculated at checkout</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span>Total</span>
+                                    <span id="cart-total">Rs 0.00</span>
+                                </div>
+                                <button class="checkout-btn" onclick="showPage('checkout')">Proceed to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Page -->
+        <section id="checkout" class="page">
+            <div class="container">
+                <div class="checkout-grid">
+                    <div class="checkout-form">
+                        <h1>Checkout</h1>
+                        <p>Enter your details below to complete purchase</p>
+                        
+                        <form id="checkout-form">
+                            <div class="form-section">
+                                <h2>Shipping Information</h2>
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="tel" name="phone" placeholder="Phone Number" required>
+                                <input type="text" name="address" placeholder="Address" required>
+                                <div class="form-row">
+                                    <input type="text" name="city" placeholder="City" required>
+                                    <input type="text" name="state" placeholder="State" required>
+                                    <input type="text" name="zipCode" placeholder="Zip code" required>
+                                </div>
+                                <button type="button" class="confirm-btn">Confirm</button>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h2>Payment Information</h2>
+                                <label>Cardholder name</label>
+                                <input type="text" name="cardholderName" required>
+                                <label>Card number</label>
+                                <input type="text" name="cardNumber" required>
+                                <div class="form-row">
+                                    <div>
+                                        <label>Expiration date</label>
+                                        <input type="text" name="expirationDate" placeholder="MM/YY" required>
+                                    </div>
+                                    <div>
+                                        <label>CVV</label>
+                                        <input type="text" name="cvv" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="order-btn">Order Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div id="checkout-items">
+                            <!-- Order items will be loaded by JavaScript -->
+                        </div>
+                        <div class="order-total">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="checkout-subtotal">Rs 0.00</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping</span>
+                                <span class="free">Free</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Total</span>
+                                <span id="checkout-total">Rs 0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section  id="categories" class="page">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Login to Shop by Category</h2>
+                        <p>Discover amazing deals across all categories</p>
+                    </div>
+                    <div class="search-bar-container">
+                        <input type="text" id="categorySearch" placeholder="Search categories or subcategories...">
+                    </div>
+                    <div class="categories-grid" id="categories-grid">
+                        <div class="category-item" data-category="Clothing"> 
+                            <i class="fas fa-tshirt"></i>
+                            <span>Clothing</span>
+                        </div>
+                        <div class="category-item" data-category="Electronics">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Electronics</span>
+                        </div>
+                        <div class="category-item" data-category="Beauty">
+                            <i class="fas fa-gem"></i>
+                            <span>Beauty</span>
+                        </div>
+                        <div class="category-item" data-category="Books">
+                            <i class="fas fa-book"></i>
+                            <span>Books</span>
+                        </div>
+                        <div class="category-item" data-category="Living">
+                            <i class="fas fa-home"></i>
+                            <span>Living</span>
+                        </div>
+                        <div class="category-item" data-category="Footwear">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>Footwear</span>
+                        </div>
+                        <div class="category-item" data-category="Sports & Fitness">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>Sports & Fitness</span>
+                        </div>
+                        <div class="category-item" data-category="Travel Essentials">
+                            <i class="fas fa-suitcase"></i>
+                            <span>Travel Essentials</span>
+                        </div>
+                        <div class="category-item" data-category="Toys & Games">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Toys & Games</span>
+                        </div>
+                        <div class="category-item" data-category="Food">
+                            <i class="fas fa-coffee"></i>
+                            <span>Food</span>
+                        </div>
+                    </div>
+                    <!-- Subcategories Section (hidden by default) -->
+                    <div id="subcategories-section" class="subcategories-section" style="display:none;">
+                        <button id="back-to-main-categories" style="margin-bottom: 1rem;">&larr; Back to Categories</button>
+                        <h3 id="subcategories-title"></h3>
+                        <div id="subcategories-list" class="subcategories-grid"></div>
+                    </div>
+                    <!-- Category Products Section (hidden by default) -->
+                    <div id="category-products-section" class="category-products-section" style="display:none;">
+                        <button id="back-to-subcategories" style="margin-bottom: 1rem;">&larr; Back to Subcategories</button>
+                        <h3 id="category-products-title"></h3>
+                        <div id="category-products-list" class="products-grid"></div>
+                    </div>
+                </div>
+            </section>
+
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="about-hero">
+                    <h1>About Needore</h1>
+                    <p>Where Essentials Meet Elegance</p>
+                </div>
+
+                <!-- Our Story -->
+                <div class="about-content">
+                    <div class="story-section">
+                        <div class="story-image">
+                            <img src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Modern retail interior">
+                        </div>
+                        <div class="story-text">
+                            <h2>Our Story</h2>
+                            <p>Needore was founded with a vision to simplify modern shopping through elegant, high-quality essentials. Our mission is to offer timeless products that enhance everyday life.</p>
+                            <p>We started this journey with a simple idea: make online shopping easier, better, and more reliable for everyone. We're not just another e-commerce brand-we're a community that values honesty, customer satisfaction, and fast delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission & Values -->
+                <div class="values-section">
+                    <h2>Missions & Values</h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Trust</h3>
+                            <p>We value transparency</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Elegance</h3>
+                            <p>Design that sells softly</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Customer-Centric</h3>
+                            <p>Built for your lifestyle</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Simplicity</h3>
+                            <p>Less but better</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="testimonials-section">
+                    <h2>What Our Customers Say</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial">
+                            <div class="testimonial-header">
+                                <div class="avatar">S</div>
+                                <h4>Sarah Johnson</h4>
+                            </div>
+                            <p>"Needore offers beautiful products that truly amplify my life. I'm so grateful to discovered this brand!"</p>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-header">
+                                <div class="avatar">M</div>
+                                <h4>Mike Chen</h4>
+                            </div>
+                            <p>"Needore offers beautiful products that truly amplify my life. I'm so grateful to discovered this brand!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="contact-hero">
+                    <h1>Get in Touch</h1>
+                    <p>Have questions or feedback?</p>
+                    <p>we'd love to hear from you</p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p>support@needore.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Phone</h4>
+                            <p>+91 9876543210</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Location</h4>
+                            <p>City, Country</p>
+                        </div>
+                        <div class="social-links">
+                            <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                            <div class="social-icon"><i class="fab fa-facebook"></i></div>
+                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                What is your return policy?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How long does shipping take?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                What payment method do you accept?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How can I track my order?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                How do I get started?
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>This is where the answer to the FAQ would be displayed. Each question would have its own detailed response.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishlist Page -->
+        <section id="wishlist" class="page">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <h1>Your Wishlist</h1>
+                        <p>All your favorite products in one place</p>
+                    </div>
+                    <div class="cart-content">
+                        <div class="cart-table-header">
+                            <div class="col-product">Product</div>
+                            <div class="col-price">Price</div>
+                            <div class="col-action">Action</div>
+                        </div>
+                        <div id="wishlist-items">
+                            <!-- Wishlist items will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <!---------------Newsletter-->
+            <section class="newsletter">
+                <div class="newsletter-wrapper">
+                    <h2 class="newsletter-title">Stay in the Loop</h2>
+                    <p class="newsletter-desc">Subscribe to get the latest trends, exclusive deals, and insider-only content — directly to your inbox.</p>
+                    
+                    
+
+                    <form class="newsletter-form" onsubmit="showSuccessMessage(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Join Now</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <p id="success-message" class="success-message">Thanks for subscribing! 🎉</p>
+
+                </div>
+            </section>
+
+
+
+    <!--                         footer                     -->
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Left Brand Section -->
+      <div class="footer-brand">
+        <h3>NEEDORE</h3>
+        <p>Discover timeless and modern essentials, curated for your wardrobe and home.</p>
+      </div>
+
+      <!-- Middle Social Section -->
+      <div class="footer-social">
+        <h4>Follow us on</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Quick Links (2 columns) -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <div class="footer-link-columns">
+          <ul>
+            <li><a href="#">Privacy & Cookies</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Manufactures</a></li>
+            <li><a href="#">Best Seller</a></li>
+          </ul>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+  <p>&copy; 2025 <strong>NEEDORE</strong>. All rights reserved.</p>
+</div>
+
+  </div>
+</footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2>NEEDORE</h2>
+                <p id="modal-subtitle">Great to have you back!</p>
+            </div>
+            
+            <!-- Login Type Selection (NEW) -->
+            <div id="login-type-selection">
+                <h3 style="text-align:center; margin-bottom:1rem;">Login as</h3>
+                <div style="display:flex; justify-content:center; gap:1.5rem;">
+                    <button class="auth-type-btn" id="user-login-btn" type="button" onclick="window.location.href='userlogin.php'">User</button>
+                    <button class="auth-type-btn" id="admin-login-btn" type="button" onclick="window.location.href='admin_login.php'">Admin</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper Initialization -->
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      640: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 5,
+      }
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
