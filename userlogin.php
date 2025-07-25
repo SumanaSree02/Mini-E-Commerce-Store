@@ -70,131 +70,151 @@ if (isset($_POST['register'])) {
 <head>
     <title>User Login & Registration</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 90vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
-            url('https://img.freepik.com/premium-photo/concept-spring-shopping-season-sale-space-text_185193-98819.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .card {
-            background: white;
-            padding: 35px 30px;
-            width: 400px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
+	body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.60)),
+    url('https://img.freepik.com/premium-photo/concept-spring-shopping-season-sale-space-text_185193-98819.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
 
-        .card h2 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: #333;
-        }
+.card {
+    background: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
 
-        .card p {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 20px;
-        }
+.card h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
 
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+}
 
-        .card input {
-            width:350px ;
-            padding: 12px;
-            margin: 10px 0 18px;
-            border-radius: 8px;
-            border: 1.8px solid #d474cb;
-            font-size: 15px;
-            transition: 0.3s;
-        }
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 18px;
+    border-radius: 8px;
+    border: 1.8px solid #d474cb;
+    font-size: 1rem;
+    transition: 0.3s;
+}
 
-        .card input:focus {
-            outline: none;
-            border-color: #c800b6;
-            box-shadow: 0 0 5px rgba(200, 0, 182, 0.2);
-        }
+.card input:focus {
+    outline: none;
+    border-color: #c800b6;
+    box-shadow: 0 0 5px rgba(200, 0, 182, 0.2);
+}
 
-        .card button {
-            width: 100%;
-            padding: 12px;
-            background: #f5def5;
-            color: #b014b0;
-            border: 2px solid #e0aee0;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-top: 10px;
-        }
+.card button {
+    width: 100%;
+    padding: 12px;
+    background: #f5def5;
+    color: #b014b0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
 
-        .card button:hover {
-            background: #f7c3f7;
-            color: #a012a0;
-        }
-        
+.card button:hover {
+    background: #f7c3f7;
+    color: #a012a0;
+}
 
-        .switch-link {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #444;
-        }
+.switch-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #444;
+}
 
-        .switch-link a {
-            color: #c800b6;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.switch-link a {
+    color: #c800b6;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .switch-link a:hover {
-            text-decoration: underline;
-        }
+.switch-link a:hover {
+    text-decoration: underline;
+}
 
-        .error, .success {
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: bold;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 14px;
-        }
+.error, .success {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
 
-        .error {
-            color: #b4003f;
-            background-color: #ffd5de;
-            border: 1px solid #f5b4c2;
-        }
+.error {
+    color: #b4003f;
+    background-color: #ffd5de;
+    border: 1px solid #f5b4c2;
+}
 
-        .success {
-            color: #2d7c2d;
-            background-color: #d9f5d9;
-            border: 1px solid #b4e1b4;
-        }
+.success {
+    color: #2d7c2d;
+    background-color: #d9f5d9;
+    border: 1px solid #b4e1b4;
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(15px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        
-    </style>
+/* ✅ Responsive Enhancements */
+@media (max-width: 600px) {
+    .card {
+        padding: 1.5rem;
+        max-width: 90vw;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card input, .card button {
+        font-size: 0.95rem;
+    }
+
+    .switch-link {
+        font-size: 0.85rem;
+    }
+}
+
+	</style>
 
     <script>
         function toggleForm(show) {

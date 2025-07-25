@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "MiniEcommerceStore", 3300);
+require_once 'db.php';
 if ($conn->connect_error) die("Connection failed.");
 
 if (!isset($_GET['admin_id'], $_GET['action'], $_GET['subcat_id'])) die("Invalid access");
